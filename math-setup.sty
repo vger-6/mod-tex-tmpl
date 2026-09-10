@@ -1,0 +1,25 @@
+\NeedsTeXFormat{LaTeX2e}[2025-11-01]
+\ProvidesPackage{math-setup}[2026-09-10 v1.0 Mathematical configuration]
+
+% mathtools extends amsmath; unicode-math supplies Unicode mathematical symbols.
+\RequirePackage{mathtools}
+\RequirePackage{amsthm}
+\RequirePackage{unicode-math}
+
+\IfFontExistsTF{Libertinus Math}
+  {\setmathfont{Libertinus Math}}
+  {\setmathfont{Latin Modern Math}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\endinput

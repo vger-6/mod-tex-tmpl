@@ -1,0 +1,26 @@
+\NeedsTeXFormat{LaTeX2e}[2025-11-01]
+\ProvidesPackage{project-style}[2026-09-09 v1.0 Project-specific document style]
+
+% LuaLaTeX provides modern Unicode and OpenType font support through fontspec.
+\RequirePackage{fontspec}
+\IfFontExistsTF{Libertinus Serif}
+  {\setmainfont{Libertinus Serif}}
+  {\setmainfont{Latin Modern Roman}}
+
+% State page dimensions explicitly instead of relying on the dated a4wide package.
+\RequirePackage[margin=30mm]{geometry}
+
+\RequirePackage{graphicx}
+\graphicspath{{figures/}}
+
+\RequirePackage[english]{babel}
+\RequirePackage{microtype}
+\RequirePackage{math-setup}
+
+% Keep hyperref after packages that alter references, captions, or the table of contents.
+\RequirePackage{hyperref}
+\hypersetup{
+  hidelinks
+}
+
+\endinput

@@ -1,0 +1,24 @@
+% Tagged PDF/UA-2 output requires LaTeX 2025-11-01 or newer.
+\DocumentMetadata{
+  lang = en,
+  pdfstandard = ua-2,
+  tagging = on,
+  tagging-setup = {math/setup = mathml-SE}
+}
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{project-style}
+
+\title{Title}
+\author{Author}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\input{content/section}
+
+\end{document}
